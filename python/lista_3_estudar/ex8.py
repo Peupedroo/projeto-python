@@ -1,5 +1,5 @@
 from random import randint
-pc = randint (0,20)
+pc = randint (0,50)
 print (" sou seu computador e estou sorteando um numero de 0 a 20 ")
 print("sera que vc consegue acertar ")
 tentativas=0
