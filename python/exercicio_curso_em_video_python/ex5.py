@@ -1,9 +1,6 @@
-numero=int (input("digite um numero "))
+numero=int(input("digite um numero ai "))
 
-dobro= numero *2
-triplo=numero*3
-raiz= numero ** (1/2)
+sub= numero-1 
+soma=numero+1
 
-print ("esse e o dobro do {} que vc digitou {}".format (numero,dobro))
-print("esse e o triplo do {} que vc digitou {}".format (numero,triplo ))
-print ("esse e o raiz do {} que vc digitou {}".format (numero,raiz))
+print ("analisando o valor {} seu antecessor e {} e o seu sucessor e {}".format (numero,sub,soma))
