@@ -35,3 +35,4 @@ def listar_produtos ():
         
 adicionar_produtos("001", "camiseta", 50, 29.99)
 listar_produtos()
+#da
