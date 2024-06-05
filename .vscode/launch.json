@@ -6,25 +6,11 @@
     "configurations": [
         
         {
-            "name": "Attach to Chrome",
-            "port": 9222,
-            "request": "attach",
-            "type": "chrome",
-            "webRoot": "${workspaceFolder}"
-        },
-        {
-            "name": "Python Debugger: Current File",
-            "type": "debugpy",
-            "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
-        },
-        
-        {
             "type": "msedge",
             "request": "launch",
-            "name": "Open ex004.html",
-            "file": "c:\\Users\\pedro\\Desktop\\exemplos\\html\\curso_em_video\\ex004.html"
+            "name": "Launch Edge against localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
         }
     ]
 }
