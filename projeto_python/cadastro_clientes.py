@@ -1,44 +1,46 @@
-# Dicionário para armazenar os cadastros dos clientes
-cadastro_clientes = {}
+# Dicionário para armazenar os cadastros dos produtos
+cadastro_produtos = {}
 
-# Função para cadastrar um novo cliente
-def cadastrar_cliente(codigo, nome, idade):
-    cadastro_clientes[codigo] = {
+# Função para cadastrar um novo produto
+def cadastrar_produto(codigo, nome, preco):
+    cadastro_produtos[codigo] = {
         "codigo": codigo,
         "nome": nome,
-        "idade": idade
+        "preco": preco
     }
 
-# Função para remover um cliente pelo código
-def remover_cliente(codigo):
-    if codigo in cadastro_clientes:
-        del cadastro_clientes[codigo]
+# Função para remover um produto pelo código
+def remover_produto(codigo):
+    if codigo in cadastro_produtos:
+        del cadastro_produtos[codigo]
     else:
-        print(f"Cliente com código {codigo} não encontrado.")
+        print(f"Produto com código {codigo} não encontrado.")
 
-# Função para atualizar o cadastro de um cliente
-def atualizar_cadastro(codigo, nome=None, idade=None):
-    if codigo in cadastro_clientes:
-        cliente = cadastro_clientes[codigo]
+# Função para atualizar o cadastro de um produto
+def atualizar_produto(codigo, nome=None, preco=None):
+    if codigo in cadastro_produtos:
+        produto = cadastro_produtos[codigo]
         if nome:
-            cliente["nome"] = nome
-        if idade:
-            cliente["idade"] = idade
+            produto["nome"] = nome
+        if preco:
+            produto["preco"] = preco
     else:
-        print(f"Cliente com código {codigo} não encontrado.")
+        print(f"Produto com código {codigo} não encontrado.")
 
-# Função para listar todos os clientes cadastrados
-def listar_clientes():
-    if cadastro_clientes:
-        for codigo, cliente in cadastro_clientes.items():
-            print(f"Código: {codigo}, Nome: {cliente['nome']}, Idade: {cliente['idade']}")
+# Função para listar todos os produtos cadastrados
+def listar_produtos():
+    if cadastro_produtos:
+        for codigo, produto in cadastro_produtos.items():
+            print(f"Código: {codigo}, Nome: {produto['nome']}, Preço: {produto['preco']}")
     else:
-        print("Nenhum cliente cadastrado.")
+        print("Nenhum produto cadastrado.")
 
-# Exemplo de uso das funções
-cadastrar_cliente(1, "João", 30)
-cadastrar_cliente(2, "Maria", 25)
-listar_clientes()
-atualizar_cadastro(1, idade=31)
-remover_cliente(2)
-listar_clientes()
+
+
+print("\nCadastro de Produtos")
+cadastrar_produto(101, "Caneta", 1.50)
+cadastrar_produto(102, "Caderno", 10.00)
+listar_produtos()
+atualizar_produto(101, preco=1.75)
+remover_produto(102)
+listar_produtos()
