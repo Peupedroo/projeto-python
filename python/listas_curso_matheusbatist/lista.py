@@ -14,3 +14,7 @@ print (nomes)
 booleans = [True, False, True]
 
 print (booleans)
+
+nomes[1] = "pedroo"
+
+print (nomes)
